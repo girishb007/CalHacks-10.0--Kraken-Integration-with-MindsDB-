@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UI Toggle</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+</head>
+<body>
+
+    <div class="header">
+        <img src="kraken-logo.png" alt="Kraken Logo" class="logo">
+        <button class="buy-crypto">Buy Crypto</button>
+        <div class="icon-container">
+            <img src="profile.png" alt="Profile" class="header-icon">
+            <img src="explore.png" alt="Explore" class="header-icon">
+            <img src="account-logo.png" alt="Account" class="header-icon">
+
+        </div>
+        
+      </div>
+      
+      
+    <!--<div class="navbar">
+        <a href="#" id="home">Home</a>
+        <a href="#" id="explore">Explore</a>
+        <a href="#" id="transaction">Transaction</a>
+        <a href="#" id="transfer">Transfer</a>
+        <a href="#" id="profits">Profits</a>
+        <a href="#" id="accountDetails">Account Details</a>
+        <a href="#" id="settings">Settings</a>
+      </div>-->
+      
+  <div class="toggle-container">
+    <div class="switch" id="toggleSwitch">
+        <div class="option" id="genericOption">Trained Model</div>
+        <div class="option" id="personalizedOption">Personalized Trade</div>
+        <div class="slider"></div>
+    </div>
+    
+  </div>
+  <div id="genericUI" class="ui-container">
+    <h1>Kraken Trade History</h1>
+    <p>Kraken Trade Hisotry of last 1000 trades trained on MindsDB LLM Model</p>
+    
+    <div class="form-container">
+      <form id="timeForm" class="time-form">
+        <label for="timeSelect">Select Time Interval: </label>
+        <select id="timeSelect" name="time">
+          <option value="5">5 min</option>
+          <option value="10">10 min</option>
+          <option value="15">15 min</option>
+          <option value="20">20 min</option>
+        </select>
+      </form>
+        <button type="button" class="submit-btn" onclick="submitTime()">Get Table</button>
+        <button class="submit-btn" onclick="getGraphData()">Get Graph</button>   
+     
+        <div class="data-display" id="tableContainer">
+            <table>
+              <tbody id="dataTable">
+                <!-- Table will be populated with JavaScript -->
+              </tbody>
+            </table>
+          </div>
+
+    </div>
+
+      <div class="graph-container" id="graphContainer" style="display:none;">
+        <!-- Graph will be appended here -->
+      </div>
+
+      <div class="summary-container">
+        <h2>Summary</h2>
+        <p>The table above provides a detailed history of BTC trade values over specific intervals. Based on the latest data and our predictive model, we estimate that the BTC price for the next 10 minutes will be in USDT. This prediction is based on recent trade patterns and market behavior.</p>
+    </div>
+    
+      
+  </div>
+  
+  
+  <div id="personalizedUI" class="ui-container">
+    <h1>Personalized Dashboard</h1>
+    
+    <form id="keyForm" class="key-form">
+      <div class="input-container">
+        <label class="key-label">
+          Private Key:
+          <input type="text" id="privateKey" name="privateKey">
+        </label>
+      </div>
+
+      <div class="input-container">
+        <label class="key-label">
+          Public Key:
+          <input type="text" id="publicKey" name="publicKey">
+        </label>
+      </div>
+
+      <div class="submit-container">
+        <button type="submit" class="submit-btn">Submit</button>
+        <button type="button" class="submit-btn" onclick="getGraphData()">Get Graph</button>
+
+      </div>
+    </form>
+    
+    <div class="data-display">
+        <table>
+          <tbody id="dataTablePersonalized">
+            <!-- Table will be populated with JavaScript -->
+          </tbody>
+        </table>
+    </div>
+</div>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+<div class="main-content">
+
+</html>

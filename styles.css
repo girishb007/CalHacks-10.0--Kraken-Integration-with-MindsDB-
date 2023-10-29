@@ -1,0 +1,307 @@
+.toggle-container {
+    text-align: center;
+    margin-top: 20px;
+}
+  
+.ui-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+}
+  
+.switch {
+    display: flex;
+    border: 2px solid #8a2be2; /* Violet border */
+    width: 200px;
+    height: 40px;
+    position: relative;
+    cursor: pointer;
+    border-radius: 20px;
+    margin: 0 auto;
+    background-color: #F1F1F1; /* White background */
+    overflow: hidden;
+}
+
+.option {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    z-index: 1;
+    color: #080808; /* White text */
+}
+
+.slider {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 50%;
+    height: 36px;
+    background-color: #8a2be2; /* Violet background */
+    border-radius: 18px;
+    transition: 0.3s;
+    box-shadow: 0 2px 4px #0003;
+}
+
+body {
+    background-color: #e7e4f2;
+    margin: 0; /* Light violet background */
+}
+
+/* When the switch is activated (Personalized) */
+.personalized .slider {
+    background-color: #9932cc; /* Darker violet */
+}
+
+.personalized #personalizedOption,
+.personalized #genericOption {
+    color: #191818;
+}
+
+.time-form {
+    margin-top: 20px;
+    display: inline-block; /* Align with the button */
+}
+  
+.data-display {
+    margin-top: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center; /* Center the table horizontally */
+}
+
+.data-display table,
+table {
+    margin: 0 auto; /* Center table */
+    border-collapse: collapse;
+    width: 60%; /* Adjust width to 60% */
+    border: 2px solid #000000; /* Black borders */
+}
+
+.data-display td,
+.data-display th,
+td, th {
+    border: 2px solid #000000; /* Black borders */
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+  
+.submit-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #8a2be2; /* Violet */
+    color: rgb(4, 4, 4);
+    border: none;
+    border-radius: 20px; /* Rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: inline-block; /* Align with the time form */
+    margin-left: 20px; /* Space between time form and button */
+    vertical-align: top; /* Align top of button with time form */
+    margin-top: 10px; /* Add space above the button */
+    margin-left: auto; /* Center the button */
+    margin-right: auto; /* Center the button */
+}
+
+.submit-btn:hover {
+    background-color: #9932cc; /* Darker violet on hover */
+}
+
+.form-container {
+    text-align: center;
+}
+
+.input-container, 
+.submit-container,
+.key-form {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.key-label {
+    display: inline-block;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.key-label input {
+    width: 300px;  
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 5px;
+    display: block;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+  
+input[type="text"] {
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+.navbar {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+  
+  .navbar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #818181;
+    display: block;
+  }
+  
+  .navbar a:hover {
+    color: #f1f1f1;
+  }
+  
+  .main-content {
+    margin-left: 160px; /* Same as the width of the sidebar */
+    padding: 0px 10px;
+  }
+  .navbar {
+    height: 100%;
+    width: 200px; /* Increased width to accommodate larger text */
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #8858b2; /* Purple background */
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+  
+  .navbar a {
+    padding: 10px 15px 10px 35px; /* Adjusted padding for better alignment */
+    text-decoration: none;
+    font-size: 18px; /* Increased font size */
+    color: #FFFFFF; /* White text */
+    display: block;
+    transition: 0.3s; /* Smooth transition for hover effect */
+  }
+  
+  .navbar a:hover {
+    background-color: #6d4691; /* Slightly darker purple for hover effect */
+    color: #FFF;
+  }
+  .header {
+    background-color: white; /* Same purple color as navbar */
+    color: #8858b2;
+    padding: 10px 20px;
+    text-align: center;
+    height: 25px; /* Set width to 70% */
+    margin: 0 auto; /* Center the div */
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 20px; /* Set a specific height */
+    margin: 0; /* Remove default margin */
+    margin: 0 auto; 
+    
+  }
+
+  .header h1 {
+    margin: 0; /* Remove default margin */
+    font-size: 2em; /* Adjust font size as needed */
+    color: #000000;
+
+  }
+  
+  .logo {
+    height: 40px;
+    width: 80px;
+    position: absolute; /* Position the logo absolutely */
+    left: 2%; /* Position the logo 30% from the left */
+  }
+
+  .buy-crypto {
+  padding: 5px 15px; /* Reduce vertical padding to decrease height */
+  font-size: 14px; /* Adjust font size if needed */
+  background-color: #8a2be2; /* Adjust the color as needed */
+  color: white;
+  border: none;
+  border-radius: 20px; /* Rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s;
+  position: absolute;
+  right : 11%;
+}
+
+.buy-crypto:hover {
+  background-color: #9932cc; /* Slightly darker color on hover */
+}
+
+.icon-container {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 2%;
+  padding: 5px 15px; /* Reduce vertical padding to decrease height */
+}
+
+.header-icon {
+  height: 20px; /* Adjust the size as needed */
+  width: 20px; /* Adjust the size as needed */
+  margin-left: 10px; /* Space between icons */
+  padding: 3px;
+}
+
+.data-display {
+    margin-top: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    overflow-y: auto; /* Make the table scrollable */
+    max-height: 500px; /* Set a maximum height */
+}
+
+.scrollable-table {
+    overflow-x: auto;
+    overflow-y: auto;
+    max-height: 300px;
+    display: block; /* Ensures block level container */
+    width: 100%; /* Ensures full width */
+  }
+  
+  .data-display table {
+    width: 100%; /* Ensures the table takes full width of its container */
+    min-width: 600px; /* Adjust as needed */
+    border-collapse: collapse;
+  }
+  .navbar {
+    z-index: 1000; /* Example value, set as needed */
+  }
+  
+  .data-display {
+    z-index: 1; /* Make sure this is less than the navbar's z-index */
+  }
+  .table-container {
+  overflow: visible;
+}
+#graphContainer {
+    width: 100%;
+    height: 500px; 
+    display: none; 
+  }
